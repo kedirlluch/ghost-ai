@@ -1,0 +1,65 @@
+# CodeRabbit configuration for automatic code reviews
+# Learn more: https://docs.coderabbit.ai/
+
+# Automatically approve and merge PRs based on rules
+language: en
+
+# Review settings
+reviews:
+  # Request review for all PRs
+  request_changes: false
+  
+  # Automatic approval settings
+  auto_review: true
+  
+  # Maximum time to wait before closing review (in seconds)
+  review_rate_limit_per_minute: 5
+
+# Paths to review
+diff_settings:
+  # Files to focus on
+  files:
+    exclude_patterns:
+      - "**/node_modules/**"
+      - "**/.next/**"
+      - "**/dist/**"
+      - "**/build/**"
+      - "**/.git/**"
+      - "package-lock.json"
+
+# PR settings
+pr_settings:
+  # Enable reviews on all pull requests
+  auto_review: true
+  
+  # Comment on code style issues
+  comment_on_style: true
+  
+  # Comment on best practices
+  comment_on_best_practices: true
+  
+  # Comment on potential bugs
+  comment_on_potential_bugs: true
+
+# Ignore patterns
+ignore:
+  - "**/*.md"
+  - "**/*.txt"
+  - ".gitignore"
+  - ".env*"
+
+# Concurrent reviews
+concurrency: 5
+
+# CodeRabbit personality
+model: "gpt-4"
+
+# Add summary comment to PRs
+summary:
+  enabled: true
+  
+# Request changes for specific issues
+request_changes_for:
+  - security_issues: true
+  - performance_issues: true
+  - style_issues: false
