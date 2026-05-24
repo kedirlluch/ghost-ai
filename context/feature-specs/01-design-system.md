@@ -2,9 +2,9 @@ Read  `AGENTS.md` before starting.
 
 We're adding the designsystem and UI primitive components.
 
-Install and condigure `shadcn/ui`. 
+Install and configure `shadcn/ui`. 
 
-Add these shadcn componets:
+Add these shadcn components:
 
 - Button
 - Card 
