@@ -47,10 +47,12 @@ function Button({
   size = "default",
   asChild = false,
   type,
+  isClose,
   ...props
 }: React.ComponentProps<"button"> &
   VariantProps<typeof buttonVariants> & {
     asChild?: boolean
+    isClose?: boolean
   }) {
   const Comp = asChild ? Slot.Root : "button"
 
